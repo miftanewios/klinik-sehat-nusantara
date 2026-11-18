@@ -1,0 +1,131 @@
+/* ===== Palet & tipografi (Pertemuan 2) ===== */
+:root {
+  --pine: #0e5a4b;        /* warna utama */
+  --pine-dark: #093f35;
+  --mint: #e4f1ec;        /* latar sekunder */
+  --sand: #fbf9f4;        /* latar halaman */
+  --amber: #f2a93b;       /* aksen */
+  --ink: #1d2b27;         /* teks */
+  --line: #cfe0d9;
+  --font: "Figtree", "Segoe UI", Roboto, Arial, sans-serif;
+}
+body { font-family: var(--font); color: var(--ink); background: var(--sand); line-height: 1.6; }
+h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
+h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+a { color: var(--pine); }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+/* ===== Navbar & footer ===== */
+.navbar-klinik { background: var(--pine); }
+.navbar-klinik .navbar-brand { color: #fff; font-weight: 700; }
+.navbar-klinik .nav-link { color: #d6ebe4; padding: .6rem 1rem; }
+.navbar-klinik .nav-link:hover { color: #fff; background: rgba(255,255,255,.12); border-radius: 6px; }
+.navbar-klinik .nav-link.active { color: #fff; font-weight: 700; box-shadow: inset 0 -3px 0 var(--amber); }
+.navbar-klinik .navbar-toggler { border-color: rgba(255,255,255,.5); filter: invert(1); }
+.footer-klinik { background: var(--pine-dark); color: #cfe3dc; padding: 1.5rem 0; font-size: .95rem; margin-top: 2rem; }
+
+/* ===== Tombol ===== */
+.btn-klinik { background: var(--pine); color: #fff; border: 2px solid var(--pine); }
+.btn-klinik:hover { background: var(--pine-dark); border-color: var(--pine-dark); color: #fff; }
+.btn-outline-klinik { background: transparent; color: var(--pine); border: 2px solid var(--pine); }
+.btn-outline-klinik:hover { background: var(--pine); color: #fff; }
+
+/* ===== Hero & judul halaman ===== */
+.hero { background: var(--mint); padding: 3.5rem 0; border-bottom: 4px solid var(--amber); }
+.sapaan { font-weight: 700; color: var(--pine); margin-bottom: .5rem; }
+.page-title { background: var(--mint); padding: 2rem 0; border-bottom: 4px solid var(--amber); }
+.page-title p { margin: .25rem 0 0; }
+.section { padding: 2.5rem 0; }
+.section-alt { background: #fff; }
+
+/* ===== Kartu poli ===== */
+.card-poli { border: 1px solid var(--line); border-left: 6px solid var(--pine); border-radius: 8px; transition: transform .15s, box-shadow .15s; }
+.card-poli:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(14, 90, 75, .15); }
+.detail-layanan { padding-left: 1.2rem; }
+
+/* ===== Tabel dokter ===== */
+.table-klinik thead th { background: var(--pine); color: #fff; font-weight: 600; white-space: nowrap; }
+.table-klinik tbody tr:hover { background: var(--mint); }
+.badge-poli { background: var(--mint); color: var(--pine-dark); border: 1px solid var(--line); font-weight: 600; }
+.hari-chip { display: inline-block; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 0 .6rem; margin: 0 .25rem .25rem 0; font-size: .9rem; }
+
+/* ===== Formulir & modal ===== */
+.form-klinik { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem; margin: 0; }
+.form-klinik .form-label { font-weight: 600; }
+.nomor-antrean { font-size: 2.2rem; font-weight: 800; color: var(--pine); letter-spacing: .04em; }
+#mRingkasan dt { font-weight: 600; }
+
+/* ===== Panel admin ===== */
+.stat-admin { background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--amber); border-radius: 8px; padding: .75rem 1rem; display: flex; flex-direction: column; }
+.stat-angka { font-size: 1.8rem; font-weight: 800; color: var(--pine); line-height: 1.1; }
+.keluhan-admin { min-width: 200px; max-width: 320px; }
+.status-menunggu { background: #fff3d6; color: #7a5200; border: 1px solid #f2d28c; }
+.status-diterima { background: #dcf1e6; color: #0b5a3a; border: 1px solid #a9d9c0; }
+.status-ditolak { background: #fbe1e1; color: #8a1f1f; border: 1px solid #efb3b3; }
+
+/* ===== Responsif (Pertemuan 5): minimal 2 media query ===== */
+@media (max-width: 767.98px) {
+  .hero { padding: 2rem 0; text-align: center; }
+  .hero .d-flex { justify-content: center; }
+  .footer-klinik .text-md-end { text-align: left; }
+  .table-klinik { font-size: .9rem; }
+}
+@media (min-width: 1200px) {
+  .hero { padding: 5rem 0; }
+  .section { padding: 3.5rem 0; }
+}
+
+/* ===== Tampilan cetak (bonus): hanya modal ringkasan ===== */
+@media print {
+  body * { visibility: hidden; }
+  #modalRingkasan, #modalRingkasan * { visibility: visible; }
+  #modalRingkasan { position: absolute; left: 0; top: 0; width: 100%; }
+  .modal-header .btn-close, .modal-footer { display: none; }
+}
+
+/* ===== Customer service: tombol melayang ===== */
+.cs-widget { position: fixed; right: 1rem; bottom: 1rem; z-index: 1050; display: flex; flex-direction: column; align-items: flex-end; gap: .75rem; }
+.cs-fab { width: 56px; height: 56px; border-radius: 50%; border: 0; background: var(--pine); color: #fff; display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 18px rgba(9, 63, 53, .35); transition: transform .15s, background .15s; }
+.cs-fab:hover { background: var(--pine-dark); transform: scale(1.06); }
+.cs-fab .cs-ikon-tutup { display: none; }
+.cs-terbuka .cs-fab .cs-ikon-buka { display: none; }
+.cs-terbuka .cs-fab .cs-ikon-tutup { display: block; }
+.cs-panel { width: min(280px, calc(100vw - 2rem)); background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--amber); border-radius: 12px; padding: 1rem; box-shadow: 0 10px 28px rgba(9, 63, 53, .22); }
+.cs-panel[hidden] { display: none; }
+.cs-judul { font-weight: 700; font-size: 1.1rem; margin: 0; }
+.cs-status { margin: .25rem 0 0; font-weight: 600; font-size: .95rem; display: flex; align-items: center; gap: .4rem; }
+.cs-titik { width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+.cs-buka { color: #0b5a3a; }
+.cs-tutup { color: #8a1f1f; }
+.cs-jam { margin: 0 0 .75rem; font-size: .9rem; color: #4a5c56; }
+.cs-aksi { display: flex; align-items: center; gap: .6rem; padding: .6rem .8rem; border-radius: 8px; font-weight: 600; text-decoration: none; margin-top: .5rem; }
+.cs-aksi-wa { background: #1f9d55; color: #fff; }
+.cs-aksi-wa:hover { background: #17803f; color: #fff; }
+.cs-aksi-tel { background: var(--mint); color: var(--pine-dark); border: 1px solid var(--line); }
+.cs-aksi-tel:hover { background: var(--pine); color: #fff; }
+@media (prefers-reduced-motion: reduce) { .cs-fab { transition: none; } }
+
+/* ===== Asisten FAQ di dalam widget ===== */
+.cs-panel-chat { width: min(340px, calc(100vw - 2rem)); }
+.cs-aksi { width: 100%; border: 0; font-family: inherit; font-size: 1rem; text-align: left; cursor: pointer; }
+.cs-aksi-bot { background: var(--pine); color: #fff; }
+.cs-aksi-bot:hover { background: var(--pine-dark); }
+.cs-link-kecil { display: block; margin-top: .75rem; font-size: .9rem; }
+.cs-chat-kepala { display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
+.cs-kembali { border: 1px solid var(--line); background: #fff; border-radius: 6px; width: 32px; height: 32px; cursor: pointer; color: var(--pine); font-weight: 700; }
+.cs-kembali:hover { background: var(--mint); }
+.cs-log { height: 250px; overflow-y: auto; background: var(--sand); border: 1px solid var(--line); border-radius: 8px; padding: .6rem; display: flex; flex-direction: column; gap: .5rem; }
+.cs-pesan { max-width: 88%; padding: .45rem .7rem; border-radius: 12px; font-size: .93rem; line-height: 1.45; overflow-wrap: anywhere; }
+.cs-pesan-bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 3px; }
+.cs-pesan-user { background: var(--pine); color: #fff; align-self: flex-end; border-bottom-right-radius: 3px; }
+.cs-daftar { margin: .35rem 0; padding-left: 1.1rem; }
+.cs-chip-baris { display: flex; flex-wrap: wrap; gap: .35rem; margin: .6rem 0; }
+.cs-chip { background: var(--mint); color: var(--pine-dark); border: 1px solid var(--line); border-radius: 999px; padding: .15rem .65rem; font-size: .85rem; cursor: pointer; }
+.cs-chip:hover { background: var(--pine); color: #fff; }
+.cs-form { display: flex; gap: .4rem; }
+
+/* ===== Halaman kontak ===== */
+.kontak-info dt { font-weight: 700; margin-top: .6rem; }
+.kontak-info dt:first-child { margin-top: 0; }
+.kontak-info dd { margin: 0; }

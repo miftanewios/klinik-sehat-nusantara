@@ -1,0 +1,37 @@
+KLINIK SEHAT NUSANTARA - VERSI PERBAIKAN
+
+Struktur:
+- index.html
+- layanan.html
+- dokter.html
+- pendaftaran.html
+- admin.html
+- css/style.css
+- js/script.js
+- img/ (letakkan logo.svg dan hero.svg milik proyek di sini)
+
+PENTING:
+1. Salin folder img dari proyek lama ke folder img pada paket ini agar logo dan ilustrasi tampil.
+2. Buka index.html melalui Live Server (disarankan), bukan dengan mengubah nama folder/path file.
+3. Login prototipe admin:
+   Username: admin
+   Password: klinik2026
+4. Data pendaftaran tersimpan di localStorage browser yang sama. Admin harus dibuka pada browser/perangkat yang sama.
+5. Ini masih prototipe front-end. Kredensial admin dan data tidak aman untuk penggunaan klinik sungguhan karena belum memakai server/database.
+
+Perbaikan utama:
+- Memperbaiki path CSS admin agar sama dengan halaman lain.
+- Validasi dokter sekarang memastikan dokter benar-benar berasal dari poli yang dipilih.
+- Validasi nama mendukung huruf beraksen, gelar/tanda titik, apostrof, dan tanda hubung.
+- Penyimpanan lokal lebih tahan terhadap data rusak dan kegagalan penyimpanan.
+- ID pendaftaran dibuat lebih unik.
+- Panel admin menghitung status dengan aman dan mengurutkan pendaftaran terbaru.
+- Perubahan data dari tab browser lain dapat memperbarui panel admin.
+- Aksi terima/tolak hanya berjalan saat sesi admin aktif dan status masih Menunggu.
+
+FITUR CUSTOMER SERVICE (BARU):
+- Tombol melayang (pojok kanan bawah, semua halaman): asisten FAQ, WhatsApp, telepon.
+- Asisten FAQ menjawab berdasarkan kata kunci dari data situs (poli, jadwal dokter, jam buka, cara daftar). Bukan AI; pertanyaan di luar daftar diarahkan ke WhatsApp.
+- Halaman kontak.html: info kontak + form yang membuka WhatsApp dengan pesan terisi.
+- GANTI nomor WhatsApp/telepon (placeholder) di js/script.js pada blok CS_KONTAK.
+- Info biaya belum ada di situs; asisten mengarahkan ke staf. Isi jawabannya di intentFaq jika datanya sudah ada.

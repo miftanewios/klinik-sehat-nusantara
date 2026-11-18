@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda | Klinik Sehat Nusantara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-halaman="index.html">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-klinik">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.svg" width="36" height="36" alt="Logo Klinik Sehat Nusantara">
+          <span>Sehat Nusantara</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="dokter.html">Jadwal Dokter</a></li>
+          <li class="nav-item"><a class="nav-link" href="pendaftaran.html">Pendaftaran</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <p class="sapaan" id="sapaan">Selamat datang</p>
+            <h1>Daftar berobat dari rumah, datang sesuai jam Anda.</h1>
+            <p class="lead">Lihat jadwal dokter, pilih poliklinik, dan ambil nomor antrean tanpa menunggu di ruang tunggu.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="pendaftaran.html" class="btn btn-klinik btn-lg">Daftar sekarang</a>
+              <a href="dokter.html" class="btn btn-outline-klinik btn-lg">Lihat jadwal dokter</a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <img src="img/logo.svg"
+         class="img-fluid logo-hero"
+         alt="Logo Klinik Sehat Nusantara">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Empat poliklinik, satu pintu pendaftaran</h2>
+        <div class="row g-3 mt-1">
+          <div class="col-12 col-sm-6 col-lg-3"><div class="card h-100 card-poli"><div class="card-body"><h3 class="h5 card-title">Poli Umum</h3><p class="card-text">Pemeriksaan dan pengobatan keluhan sehari-hari.</p></div></div></div>
+          <div class="col-12 col-sm-6 col-lg-3"><div class="card h-100 card-poli"><div class="card-body"><h3 class="h5 card-title">Poli Gigi</h3><p class="card-text">Pemeriksaan, tambal, dan pembersihan karang gigi.</p></div></div></div>
+          <div class="col-12 col-sm-6 col-lg-3"><div class="card h-100 card-poli"><div class="card-body"><h3 class="h5 card-title">Poli KIA</h3><p class="card-text">Kesehatan ibu hamil, bayi, dan anak.</p></div></div></div>
+          <div class="col-12 col-sm-6 col-lg-3"><div class="card h-100 card-poli"><div class="card-body"><h3 class="h5 card-title">Poli Gizi</h3><p class="card-text">Konsultasi pola makan dan perencanaan gizi.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Pertanyaan yang sering diajukan</h2>
+        <div class="accordion mt-3" id="faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Bagaimana cara mendaftar?</button></h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Buka halaman Pendaftaran, isi data diri, pilih poliklinik dan dokter, lalu kirim. Nomor antrean muncul di layar setelah data dinyatakan benar.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Kapan saya bisa mendaftar?</button></h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Kunjungan dapat dijadwalkan mulai hari ini sampai 14 hari ke depan.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Apa yang perlu dibawa saat datang?</button></h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Bawa KTP atau kartu identitas lain, kartu BPJS bila ada, dan tunjukkan nomor antrean Anda di loket.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-klinik">
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col-md-6">
+          <strong>Klinik Pratama Sehat Nusantara</strong><br>
+          Jl. Contoh No. 12, Kota Kediri
+        </div>
+        <div class="col-md-6 text-md-end">
+          Senin–Sabtu, 07.30–17.00 WIB<br>
+          &copy; 2026 Kelompok XX, Pemrograman Web (prototipe tugas kuliah)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
